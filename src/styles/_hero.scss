@@ -8,6 +8,18 @@
 
     &__container {
         max-width: 464px;
+
+        @media (max-width:768px) {
+            margin: 160px auto;
+        }
+
+        &__slogan {
+            img {
+                @media (max-width:768px) {
+                    max-width: 432px;
+                }
+            }
+        }
     }
 
     &__title {

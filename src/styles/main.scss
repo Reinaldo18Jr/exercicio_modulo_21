@@ -30,24 +30,22 @@ body {
 }
 
 .link-button {
+    font-size: 24px;
+    width: 100%;
+    height: 56px;
+    padding: 8px 14px;
+    border-radius: 4px;
     text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 56px;
-    font-size: 24px;
     text-transform: uppercase;
-    border-radius: 4px;
-    padding: 8px 14px;
-    cursor: pointer;
-}
-
-@mixin mainButton() {
-    padding: 8px;
-    border: none;
-    border-radius: 4px;
-    align-items: center;
     cursor: pointer;
     background-color: variaveis.$corDoSpanTempo;
+    color: variaveis.$corDoTextoDark;
+
+    &:hover {
+        background-color: variaveis.$corDeFundoAccordion;
+        color: variaveis.$corDeTextosSecundarios;
+    }
 }

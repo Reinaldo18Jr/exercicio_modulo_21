@@ -8,6 +8,10 @@
         font-size: 48px;
         text-align: center;
         color: variaveis.$corDoTitulo;
+
+        @media (max-width:768px) {
+            font-size: 28px;
+        }
     }
 
     &__trilogy {
@@ -24,6 +28,10 @@
                 cursor: pointer;
                 color: variaveis.$corDeTextosSecundarios;
 
+                @media (max-width:768px) {
+                    font-size: 20px;
+                }
+
                 &::after {
                     content: '+';
                     font-size: 40px;
@@ -33,6 +41,10 @@
                     display: flex;
                     align-items: center;
                     position: absolute;
+
+                    @media (max-width:768px) {
+                        font-size: 20px;
+                    }
                 }
             }
 
@@ -41,13 +53,20 @@
             &__movie {
                 max-width: 800px;
                 margin: 0px auto;
-                height: 0;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 overflow: hidden;
+                height: 0;
                 transition: height, .5s ease;
+
+                @media (max-width:768px) {
+                    display: block;
+                    text-align: center;
+                }
             }
+
+
 
             &--is-open {
                 .movies__trilogy__item__title::after {
@@ -63,12 +82,22 @@
                 img {
                     max-width: 400px;
                     margin-right: 32px;
+
+                    @media (max-width:768px) {
+                        max-width: 240px;
+                        margin: 8px auto;
+                    }
                 }
 
                 p {
                     font-size: 20px;
                     margin-left: 32px;
                     color: variaveis.$corDeTextosSecundarios;
+
+                    @media (max-width:768px) {
+                        font-size: 16px;
+                        margin: 0 auto;
+                    }
                 }
 
                 span {
@@ -77,8 +106,17 @@
                     align-items: center;
                     color: variaveis.$corDoSpanTempo;
 
+                    @media (max-width:768px) {
+                        margin: 16px auto;
+                        justify-content: center;
+                    }
+
                     img {
                         max-width: 40px;
+                        @media (max-width:768px) {
+                            margin: 0 16px;
+                            max-width: 32px;
+                        }
                     }
                 }
             }

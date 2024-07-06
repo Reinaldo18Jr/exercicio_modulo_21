@@ -15,6 +15,10 @@
         font-size: 24px;
         margin-bottom: 8px;
         color: variaveis.$corDoNome;
+
+        @media (max-width:768px) {
+            font-size: 20px;
+        }
     }
 
     &__links {
@@ -34,6 +38,10 @@
                 display: block;
                 color: variaveis.$corDoSpanTempo;
 
+                @media (max-width:768px) {
+                    font-size: 14px;
+                }
+
                 &:hover {
                     color: variaveis.$corDeTextosSecundarios;
                 }
@@ -43,5 +51,9 @@
 
     p {
         font-size: 14px;
+
+        @media (max-width:768px) {
+            font-size: 12px;
+        }
     }
 }
