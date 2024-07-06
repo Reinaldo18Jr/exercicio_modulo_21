@@ -1,0 +1,86 @@
+@use 'variaveis';
+
+.movies {
+    padding: 5.6vw;
+
+    &__title {
+        margin-bottom: 40px;
+        font-size: 48px;
+        text-align: center;
+        color: variaveis.$corDoTitulo;
+    }
+
+    &__trilogy {
+        &__item {
+            padding: 16px;
+            margin-bottom: 16px;
+            background-color: variaveis.$corDeFundoAccordion;
+
+            &__title {
+                font-size: 40px;
+                text-align: center;
+                align-items: center;
+                position: relative;
+                cursor: pointer;
+                color: variaveis.$corDeTextosSecundarios;
+
+                &::after {
+                    content: '+';
+                    font-size: 40px;
+                    top: 0;
+                    height: 100%;
+                    right: 24px;
+                    display: flex;
+                    align-items: center;
+                    position: absolute;
+                }
+            }
+
+
+
+            &__movie {
+                max-width: 800px;
+                margin: 0px auto;
+                height: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                transition: height, .5s ease;
+            }
+
+            &--is-open {
+                .movies__trilogy__item__title::after {
+                    content: '-';
+                }
+
+                .movies__trilogy__item__movie {
+                    height: auto;
+                    transition: height, .5s ease;
+                }
+            }
+
+                img {
+                    max-width: 400px;
+                    margin-right: 32px;
+                }
+
+                p {
+                    font-size: 20px;
+                    margin-left: 32px;
+                    color: variaveis.$corDeTextosSecundarios;
+                }
+
+                span {
+                    margin-top: 64px;
+                    display: flex;
+                    align-items: center;
+                    color: variaveis.$corDoSpanTempo;
+
+                    img {
+                        max-width: 40px;
+                    }
+                }
+            }
+        }
+    }

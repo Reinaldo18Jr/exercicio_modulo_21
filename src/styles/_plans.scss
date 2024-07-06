@@ -1,0 +1,45 @@
+@use 'main';
+@use 'variaveis';
+
+.plans {
+    padding: 5.6vw;
+
+    &__title {
+        font-size: 48px;
+        margin-bottom: 40px;
+        text-align: center;
+        color: variaveis.$corDoTitulo;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-around;
+
+        &__item {
+            text-align: center;
+        }
+
+        .item_name {
+            font-size: 32px;
+            margin-bottom: 16px;
+            color: variaveis.$corDeTextosSecundarios;
+        }
+
+        .item_description {
+            font-size: 24px;
+            margin-bottom: 16px;
+            color: variaveis.$corDoSpanTempo;
+        }
+
+        button {
+            @include mainButton();
+            font-size: 16px;
+            width: 100%;
+        }
+
+        img {
+            height: 80px;
+            margin-bottom: 32px;
+        }
+    }
+}

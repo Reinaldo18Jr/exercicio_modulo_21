@@ -1,0 +1,47 @@
+@use 'variaveis';
+
+.footer {
+    padding: 24px 8px;
+
+    &__container {
+        max-width: 1024px;
+        width: 100%;
+        padding-bottom: 16px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 24px;
+        margin-bottom: 8px;
+        color: variaveis.$corDoNome;
+    }
+
+    &__links {
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        &__item {
+            display: inline-block;
+
+            a {
+                font-size: 16px;
+                padding: 8px 16px;
+                text-decoration: none;
+                display: block;
+                color: variaveis.$corDoSpanTempo;
+
+                &:hover {
+                    color: variaveis.$corDeTextosSecundarios;
+                }
+            }
+        }
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
